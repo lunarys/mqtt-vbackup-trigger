@@ -1,0 +1,16 @@
+[Unit]
+Description=Manage remote start of device backup
+After=network.target
+Requires=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 -u /usr/local/bin/backup-trigger/mqtt-backup-trigger.py -f /usr/local/bin/backup-trigger/backup-trigger.conf
+Restart=always
+RestartSec=30s
+NotifyAccess=all
+TimeoutStartSec=120
+TimeoutStopSec=30
+
+[Install]
+WantedBy=multi-user.target

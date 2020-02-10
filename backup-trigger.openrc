@@ -1,0 +1,7 @@
+#!/sbin/openrc-run
+# Tutorial on https://github.com/OpenRC/openrc/blob/master/service-script-guide.md
+# Place in /etc/init.d
+command="/usr/bin/python3 -u /usr/local/bin/backup-trigger/mqtt-backup-trigger.py"
+command_args="-f /usr/local/bin/backup-trigger/backup-trigger.conf"
+command_background=true
+pidfile="/run/${RC_SVCNAME}.pid"
