@@ -10,7 +10,7 @@ def backup(action, force):
     if force:
         options=options + "-f"
 
-    script="/usr/local/bin/backup-service/vbackup"
+    script="/usr/local/bin/vbackup"
 
     if os.path.isfile(script):
         print("================================== START ====================================")

@@ -5,7 +5,7 @@ Requires=network.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/python3 -u /usr/local/bin/backup-trigger/mqtt-backup-trigger.py -f /usr/local/bin/backup-trigger/backup-trigger.conf
+ExecStart=/usr/bin/python3 -u /usr/local/bin/mqtt-backup-trigger.py -f /etc/mqtt-integration/backup-trigger.conf
 Restart=always
 RestartSec=30s
 NotifyAccess=all
