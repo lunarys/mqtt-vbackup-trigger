@@ -14,3 +14,4 @@ TimeoutStopSec=30
 
 [Install]
 WantedBy=multi-user.target
+Alias=vbackup.service vbackup-trigger.service
